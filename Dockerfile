@@ -59,6 +59,10 @@ CMD ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 ADD math_calc.sh /math_calc.sh
 RUN chmod a+rx /math_calc.sh
 
+RUN apt-get autoclean
+RUN apt-get clean
+RUN apt-get autoremove
+
 ADD start.sh /start.sh
 RUN chmod a+rx /start.sh
 #CMD /start.sh
