@@ -1,7 +1,7 @@
 FROM debian
 USER root
 RUN apt-get update
-RUN apt-get install ssh curl wget nginx-full nano bash tmux zip unzip screen ca-certificates python3 python3-pip build-essential manpages-dev apt-utils git locales cmake ffmpeg redis-server supervisor iputils-ping -y
+RUN apt-get install ssh curl wget nginx-full nano bash tmux zip unzip screen ca-certificates python3 python3-pip git locales cmake ffmpeg redis-server supervisor iputils-ping -y
 
 RUN mkdir /run/sshd 
 #RUN echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config
