@@ -1,0 +1,93 @@
+{
+	"workbench.colorTheme": "Default Dark+",
+	"latex-workshop.latex.autoBuild.run": "onFileChange",
+	"latex-workshop.latex.autoClean.run":"never",
+	"latex-workshop.view.pdf.internal.synctex.keybinding":"double-click",
+	"latex-workshop.view.pdf.zoom":"1.2",
+	"latex-workshop.showContextMenu": true,
+	"latex-workshop.intellisense.package.enabled": true,
+	"latex-workshop.message.error.show": false,
+	"latex-workshop.message.warning.show": false,
+	"latex-workshop.viewer.pdf.internal.port":345,
+	"latex-workshop.view.pdf.hand":false,
+	"latex-workshop.message.badbox.show":false,
+	"latex-workshop.message.log.show":false,
+	"latex-workshop.latex.tools": [
+		{
+			"name": "xelatex",
+			"command": "xelatex",
+			"args": [
+				"-synctex=1",
+				"-interaction=nonstopmode",
+				"-file-line-error",
+				"%DOCFILE%"
+			]
+		},
+		{
+			"name": "pdflatex",
+			"command": "pdflatex",
+			"args": [
+				"-synctex=1",
+				"-interaction=nonstopmode",
+				"-file-line-error",
+				"%DOCFILE%"
+			]
+		},
+		{
+			"name": "bibtex",
+			"command": "bibtex",
+			"args": [
+				"%DOCFILE%"
+			]
+		}
+	],
+	"latex-workshop.latex.recipes": [
+		{
+			"name": "xelatex * 2",
+			"tools": [
+				"xelatex",
+				"xelatex"
+			],
+		},
+		{
+			"name": "xelatex",
+			"tools": [
+				"xelatex"
+			],
+		},
+		{
+			"name": "pdflatex * 2",
+			"tools": [
+				"pdflatex",
+				"pdflatex"
+			]
+		},
+		{
+			"name": "pdflatex",
+			"tools": [
+				"pdflatex"
+			]
+		},
+		{
+			"name": "xe->bib->xe->xe",
+			"tools": [
+				"xelatex",
+				"bibtex",
+				"xelatex",
+				"xelatex"
+			]
+		},
+		{
+			"name": "pdf->bib->pdf->pdf",
+			"tools": [
+				"pdflatex",
+				"bibtex",
+				"pdflatex",
+				"pdflatex"
+			]
+		}
+	],
+	"editor.unicodeHighlight.ambiguousCharacters": false,
+	"problems.decorations.enabled": false,
+	"editor.wordWrap": "on"
+}
