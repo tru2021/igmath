@@ -1,7 +1,7 @@
 FROM debian
 USER root
 RUN apt-get update
-RUN apt-get install ssh curl wget nginx-full nano bash zip unzip screen ca-certificates python3 python3-pip git redis-server -y
+RUN apt-get install ssh curl wget nginx nano bash zip unzip screen ca-certificates python3 python3-pip git redis-server -y
 
 RUN mkdir /run/sshd 
 #RUN echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config
